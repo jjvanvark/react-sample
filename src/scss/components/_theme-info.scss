@@ -1,0 +1,191 @@
+.theme-info {
+  padding: rem(32) 0;
+  &__detail {
+    padding: rem(40) rem(24);
+    margin-bottom: rem(32);
+    height: calc(100% - #{rem(32)});
+
+    &--top-left {
+      border-radius: 0 rem(20);
+      background-color: blue(medium);
+    }
+    &--top-right {
+      border-radius: rem(20) 0;
+      background: no-repeat center/cover;
+      display: none;
+    }
+
+    &--bottom-left {
+      border-radius: rem(20) 0;
+      background-color: blue(dark);
+    }
+    &--bottom-right {
+      border-radius: 0 rem(20);
+      background-color: blue(xxdark);
+    }
+  }
+  &__title {
+    font-size: rem(32);
+    line-height: rem(40);
+    font-weight: 700;
+    color: $white;
+    margin-bottom: rem(8);
+  }
+  &__dwars-list {
+    list-style: none;
+    margin-left: 0;
+  }
+  &__dwars-list-item {
+    border-bottom: rem(1) solid $white;
+    &:last-child {
+      border-bottom: 0;
+    }
+  }
+  &__dwars-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: $white;
+    font-size: rem(16);
+    line-height: rem(24);
+    padding: rem(8) 0;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  &__dwars-icon {
+    width: rem(8);
+    height: auto;
+  }
+  &__cluster-title {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__cluster-label {
+    font-weight: 700;
+    font-size: rem(16);
+    line-height: rem(24);
+    background-color: blue(xxdark);
+    padding: rem(8) rem(24);
+    border-radius: rem(24);
+    margin-bottom: rem(8);
+    color: $white;
+    text-transform: capitalize;
+  }
+  &__cluster-content {
+    color: $white;
+  }
+  &__clusters-list {
+    list-style: none;
+    margin-left: 0;
+  }
+  &__clusters-list-item {
+    margin-top: rem(8);
+  }
+  &__clusters-label {
+    font-weight: 700;
+    font-size: rem(16);
+    line-height: rem(24);
+    padding: rem(8) rem(24);
+    border-radius: rem(24);
+    margin-bottom: rem(8);
+    color: $white;
+    display: flex;
+    width: 100%;
+    text-align: left;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    text-transform: capitalize;
+    & > svg {
+      width: rem(8);
+    }
+    background-color: $waterkwantiteit-xdark;
+  }
+  &__clusters-label--red {
+    background-color: $waterveiligheid-xdark;
+  }
+  &__clusters-label--green {
+    background-color: $waterkwaliteit-xdark;
+  }
+  &__clusters-label--brown {
+    background-color: $waterketen-xdark;
+  }
+  &__clusters-label--yellow {
+    background-color: $organisatie-bestuur-xdark;
+  }
+  &__clusters-label--purple {
+    background-color: $overkoepelend-xdark;
+  }
+  &--purple {
+    .theme-info__detail {
+      &--top-left {
+        background-color: purple(medium);
+      }
+      &--bottom-left {
+        background-color: purple(dark);
+      }
+      &--bottom-right {
+        background-color: purple(xxdark);
+      }
+    }
+  }
+  &--red {
+    .theme-info__detail {
+      &--top-left {
+        background-color: red(medium);
+      }
+      &--bottom-left {
+        background-color: red(dark);
+      }
+      &--bottom-right {
+        background-color: red(xxdark);
+      }
+    }
+  }
+  &--yellow {
+    .theme-info__detail {
+      &--top-left {
+        background-color: yellow(medium);
+      }
+      &--bottom-left {
+        background-color: yellow(dark);
+      }
+      &--bottom-right {
+        background-color: yellow(xxdark);
+      }
+    }
+  }
+  &--green {
+    .theme-info__detail {
+      &--top-left {
+        background-color: green(medium);
+      }
+      &--bottom-left {
+        background-color: green(dark);
+      }
+      &--bottom-right {
+        background-color: green(xxdark);
+      }
+    }
+  }
+  &--brown {
+    .theme-info__detail {
+      &--top-left {
+        background-color: brown(medium);
+      }
+      &--bottom-left {
+        background-color: brown(dark);
+      }
+      &--bottom-right {
+        background-color: brown(xxdark);
+      }
+    }
+  }
+  @include media-breakpoint-up(l) {
+    padding: rem(80) 0;
+    &__detail--top-right {
+      display: block;
+    }
+  }
+}

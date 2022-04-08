@@ -1,0 +1,138 @@
+.theme-filter {
+  background-color: $waterkwantiteit-dark;
+  color: $white;
+  &__content-mobile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: rem(4) 0;
+  }
+
+  &__desktop {
+    display: none;
+  }
+
+  &__cluster-panel {
+    background-color: $waterkwantiteit-xdark;
+    overflow: hidden;
+  }
+
+  &__cluster-list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    height: rem(80);
+  }
+  &__cluster-list-item {
+    display: flex;
+    align-items: center;
+    margin-left: rem(32);
+    input {
+      flex: 1 0 auto;
+
+      &#cluster-filter-0 {
+        &:checked {
+          @include checkmark(brown(dark));
+        }
+      }
+
+      &#cluster-filter-1 {
+        &:checked {
+          @include checkmark(red(xxdark));
+        }
+      }
+
+      &#cluster-filter-2 {
+        &:checked {
+          @include checkmark(green(medium));
+        }
+      }
+
+      &#cluster-filter-3 {
+        &:checked {
+          @include checkmark(yellow(xdark));
+        }
+      }
+
+      &#cluster-filter-4 {
+        &:checked {
+          @include checkmark(blue(light));
+        }
+      }
+    }
+    label {
+      font-size: rem(16);
+      line-height: rem(24);
+      padding-left: rem(8);
+      text-transform: uppercase;
+    }
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+
+  &__development {
+    height: rem(80);
+    display: flex;
+    align-items: center;
+  }
+
+  &__development-button {
+    background-color: transparent;
+    color: $waterkwantiteit-xxdark;
+    display: flex;
+    font-size: rem(16);
+    line-height: rem(24);
+    align-items: center;
+    padding: rem(12) rem(24) rem(12) rem(16);
+    text-transform: uppercase;
+    margin-left: rem(-16);
+    position: relative;
+    z-index: 1;
+    height: auto;
+
+    &::before {
+      bottom: rem(-20);
+      content: "";
+      display: block;
+      height: rem(16 + 20); // Bottom margin and border radius.
+      left: 0;
+      position: absolute;
+      width: 100%;
+    }
+
+    &:hover {
+      color: $white;
+      background-color: $waterkwantiteit-xxdark;
+    }
+
+    &--active {
+      color: $white;
+      background-color: $waterkwantiteit-xxdark;
+
+      &::before {
+        background-color: inherit;
+      }
+
+      svg {
+        transform: rotate(180deg);
+        transform-origin: center center;
+      }
+    }
+  }
+
+  &__development-button-icon {
+    display: flex;
+  }
+
+  @include media-breakpoint-up(l) {
+    background-color: $waterkwantiteit-xlight;
+    &__mobile {
+      display: none;
+    }
+    &__desktop {
+      display: block;
+    }
+  }
+}

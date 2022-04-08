@@ -1,0 +1,11 @@
+
+input[type="checkbox"] {
+  appearance: none;
+  background: transparent inline-svg('<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 2C0 0.895431 0.895431 0 2 0H12V10C12 11.1046 11.1046 12 10 12H0V2Z" fill="white"/></svg>') no-repeat center;
+  height: rem(12);
+  width: rem(12);
+
+  &:checked {
+    @include checkmark();
+  }
+}

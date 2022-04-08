@@ -1,0 +1,35 @@
+@use "sass:map";
+
+@function blue($lightness: medium) {
+  $cluster: map.get($color-mapping, blue);
+  @return map.get($cluster, $lightness);
+}
+
+@function purple($lightness: medium) {
+  $cluster: map.get($color-mapping, purple);
+  @return map.get($cluster, $lightness);
+}
+
+@function red($lightness: medium) {
+  $cluster: map.get($color-mapping, red);
+  @return map.get($cluster, $lightness);
+}
+
+@function yellow($lightness: medium) {
+  $cluster: map.get($color-mapping, yellow);
+  @return map.get($cluster, $lightness);
+}
+
+@function green($lightness: medium) {
+  $cluster: map.get($color-mapping, green);
+  @return map.get($cluster, $lightness);
+}
+
+@function brown($lightness: medium) {
+  $cluster: map.get($color-mapping, brown);
+  @return map.get($cluster, $lightness);
+}
+
+@function white() {
+  @return $white;
+}

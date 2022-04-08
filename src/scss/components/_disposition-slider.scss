@@ -1,0 +1,28 @@
+.disposition-slider {
+  background-color: blue(xlight);
+  padding: rem(40) 0;
+  border-top-right-radius: rem(40);
+  border-bottom-left-radius: rem(40);
+
+  &--purple {
+    background-color: purple(xlight);
+  }
+  &--red {
+    background-color: red(xlight);
+  }
+  &--yellow {
+    background-color: yellow(xlight);
+  }
+  &--green {
+    background-color: green(xlight);
+  }
+  &--brown {
+    background-color: brown(xlight);
+  }
+
+  @include media-breakpoint-up(l) {
+    padding: rem(80) 0;
+    border-top-right-radius: rem(80);
+    border-bottom-left-radius: rem(80);
+  }
+}

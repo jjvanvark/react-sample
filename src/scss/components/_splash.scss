@@ -1,0 +1,68 @@
+
+.Splash {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.Splash-background {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+
+  img {
+    display: block;
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+  }
+}
+
+.Splash-header {
+  align-items: center;
+  display: flex;
+  height: rem(83);
+  justify-content: center;
+  position: relative;
+  width: 100%;
+
+  @include media-breakpoint-up(l) {
+    height: rem(124);
+  }
+}
+
+.Splash-body {
+  color: blue(xxdark);
+  margin-top: rem(8);
+  position: relative;
+  text-align: center;
+  width: 100%;
+
+  @include media-breakpoint-up(l) {
+    margin: auto;
+  }
+}
+
+.Splash-subtitle {
+  font-size: rem(24);
+  line-height: rem(32);
+  margin-bottom: rem(24);
+  text-transform: uppercase;
+
+  @include media-breakpoint-up(l) {
+    font-size: rem(40);
+    line-height: rem(48);
+    margin-bottom: rem(56);
+  }
+}
+
+.Splash-actions {
+  .button {
+    margin-bottom: rem(16);
+  }
+}

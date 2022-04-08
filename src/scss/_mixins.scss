@@ -1,0 +1,57 @@
+@use "sass:map";
+
+@mixin bg($color, $lightness: medium) {
+  $cluster: map.get($color-mapping, $color);
+  $background: map.get($cluster, $lightness);
+  $darkest: map.get($cluster, xxdark);
+
+  background-color: $background;
+
+  // Get contrast ratios between background and darkest, and background and white.
+  $contrast-ratio-1: get-color-contrast-ratio($background, $darkest);
+  $contrast-ratio-2: get-color-contrast-ratio($background, white());
+
+  @if $color == yellow {
+    @if $contrast-ratio-1 >= $contrast-ratio-2 {
+      $color: $darkest;
+    } @else {
+      $color: white();
+    }
+  } @else {
+    @if is-wcag-aa(white(), $background, 24px) {
+      $color: white();
+    } @else {
+      $color: $darkest;
+    }
+  }
+
+  color: $color;
+
+  // @if not is-wcag-aa($color, $background) {
+  //   @debug 'Contrast does not meet WCAG 2.1 AA!';
+  // }
+}
+
+@mixin box-shadow() {
+  box-shadow: $box-shadow;
+}
+
+@mixin checkmark($color: $waterkwantiteit-xdark) {
+  background-image: inline-svg(
+    '<svg width="12" height="12" viewBox="0 0 12 12" fill="#{$color}" xmlns="http://www.w3.org/2000/svg"><path d="M0 2C0 0.895431 0.895431 0 2 0H12V10C12 11.1046 11.1046 12 10 12H0V2Z" fill="white"/><path d="M9.0805 3.15526C9.13014 3.1061 9.18938 3.06705 9.25475 3.04039C9.32013 3.01373 9.39033 3 9.46124 3C9.53215 3 9.60235 3.01373 9.66772 3.04039C9.7331 3.06705 9.79234 3.1061 9.84197 3.15526C10.05 3.35927 10.0529 3.68894 9.84925 3.89649L5.54879 8.83095C5.49997 8.88299 5.44072 8.92482 5.37467 8.95387C5.30861 8.98292 5.23715 8.99859 5.16465 8.99991C5.09214 9.00123 5.02012 8.98818 4.95299 8.96156C4.88586 8.93493 4.82504 8.8953 4.77423 8.84507L2.15745 6.27124C2.05653 6.17134 2 6.03701 2 5.8971C2 5.75719 2.05653 5.62285 2.15745 5.52295C2.20709 5.4738 2.26633 5.43475 2.3317 5.40809C2.39708 5.38143 2.46728 5.3677 2.53819 5.3677C2.6091 5.3677 2.6793 5.38143 2.74467 5.40809C2.81005 5.43475 2.86929 5.4738 2.91892 5.52295L5.1386 7.7064L9.06596 3.17079C9.07048 3.16533 9.07534 3.16015 9.0805 3.15526Z"/></svg>'
+  );
+}
+
+@mixin transition(
+  $property,
+  $duration: $transition-duration,
+  $timing-function: $transition-timing-function
+) {
+  transition-duration: $duration;
+  transition-property: join(
+    $property,
+    (),
+    comma
+  ); // Silly trick to put commas between the values.
+  transition-timing-function: $timing-function;
+}

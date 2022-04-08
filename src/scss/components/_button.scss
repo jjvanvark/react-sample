@@ -1,0 +1,63 @@
+
+.button {
+  @include transition(background-color color);
+  align-items: center;
+  background-color: $button-background;
+  border-radius: 0 rem(20);
+  color: blue(xxdark);
+  display: inline-flex;
+  font-weight: 500;
+  height: rem(44);
+  justify-content: center;
+  min-width: rem(175);
+  padding-left: rem(24);
+  padding-right: rem(24);
+  text-decoration: none;
+  text-transform: uppercase;
+
+  > svg {
+    margin-right: rem(8);
+  }
+
+  &:hover {
+    background-color: $button-background-active;
+    color: white();
+  }
+}
+
+.button--alt {
+  border-radius: rem(20) 0;
+}
+
+.button--features {
+  border-top-right-radius: 0;
+  min-width: auto;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: rem(76);
+
+  > svg {
+    margin-right: 0;
+  }
+
+  @include media-breakpoint-up(l) {
+    border-top-right-radius: rem(20);
+    min-width: rem(175);
+    position: relative;
+    width: auto;
+
+    > svg {
+      margin-right: rem(8);
+    }
+  }
+
+  .button__label {
+    display: none;
+    margin-top: rem(4);
+
+    @include media-breakpoint-up(l) {
+      display: inline-block;
+    }
+  }
+}

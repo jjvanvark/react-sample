@@ -1,0 +1,93 @@
+.mobile-filter {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  background-color: transparentize($color: $waterkwantiteit-xxdark, $amount: 1);
+  pointer-events: none;
+  transition: background-color $transition-timing-function $transition-duration;
+  color: $waterkwantiteit-xxdark;
+  z-index: 10;
+
+  &__panel {
+    background-color: $waterkwantiteit-xxlight;
+    position: absolute;
+    top: 120vh;
+    transition: top $transition-timing-function $transition-duration;
+    width: 100%;
+    bottom: 0;
+    border-top-left-radius: rem(40);
+    border-top-right-radius: rem(40);
+    padding-top: rem(32);
+  }
+
+  &__inner-panel {
+    overflow: scroll;
+    height: 100%;
+    width: 100%;
+  }
+
+  &__top-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: rem(12) 0;
+  }
+
+  &__top-bar-title {
+    font-size: rem(20);
+    line-height: rem(24);
+  }
+  &__top-bar-button {
+    background-color: transparent;
+    border: 0;
+    color: $waterkwantiteit-xxdark;
+  }
+
+  &__list-panel {
+    border-top: rem(1) solid $waterkwantiteit-xxdark;
+    padding: rem(12) 0;
+  }
+  &__list-panel-title {
+    font-size: rem(16);
+    line-height: rem(24);
+    padding: 0 0 rem(12);
+  }
+  &__list {
+    list-style: none;
+  }
+  &__list-item {
+    padding: rem(8) 0;
+    label {
+      padding-left: rem(8);
+    }
+  }
+
+  &__close-button {
+    background-color: $waterkwantiteit-xxlight;
+    position: absolute;
+    top: rem(-20);
+    left: 50%;
+    transform: translateX(-50%);
+    color: $waterkwantiteit-xxdark;
+    width: rem(40);
+    height: rem(40);
+    border-top-left-radius: rem(20);
+    border-top-right-radius: rem(20);
+    cursor: pointer;
+  }
+
+  &--visible {
+    padding-top: 0;
+    background-color: transparentize(
+      $color: $waterkwantiteit-xxdark,
+      $amount: 0.44
+    );
+    pointer-events: auto;
+
+    .mobile-filter__panel {
+      top: rem(115);
+    }
+  }
+}

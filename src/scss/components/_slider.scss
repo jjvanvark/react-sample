@@ -1,0 +1,20 @@
+.slider {
+  overflow: hidden;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none;
+  &__row {
+    flex-wrap: nowrap;
+    position: relative;
+    transition: left 320ms ease-in-out;
+    padding-top: rem(20);
+  }
+  @include media-breakpoint-up(l) {
+    &__row {
+      padding-top: 0;
+    }
+  }
+}

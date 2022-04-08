@@ -1,0 +1,61 @@
+body.modal-open {
+  overflow: hidden;
+}
+
+.disposition-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding-top: 120vh;
+  transition: padding-top ease-out $transition-duration,
+    background-color $transition-timing-function $transition-duration;
+  pointer-events: none;
+
+  overflow: hidden;
+
+  &--blue {
+    background-color: transparentize($waterkwantiteit-xxdark, 1);
+  }
+
+  &--purple {
+    background-color: transparentize($overkoepelend-xxdark, 1);
+  }
+  &--red {
+    background-color: transparentize($waterveiligheid-xxdark, 1);
+  }
+  &--yellow {
+    background-color: transparentize($organisatie-bestuur-xxdark, 1);
+  }
+  &--green {
+    background-color: transparentize($waterkwaliteit-xxdark, 1);
+  }
+  &--brown {
+    background-color: transparentize($waterketen-xxdark, 1);
+  }
+
+  &--open {
+    pointer-events: auto;
+    overflow: scroll;
+    &--blue {
+      background-color: transparentize($waterkwantiteit-xxdark, 0.44);
+    }
+    &--purple {
+      background-color: transparentize($overkoepelend-xxdark, 0.44);
+    }
+    &--red {
+      background-color: transparentize($waterveiligheid-xxdark, 0.44);
+    }
+    &--yellow {
+      background-color: transparentize($organisatie-bestuur-xxdark, 0.44);
+    }
+    &--green {
+      background-color: transparentize($waterkwaliteit-xxdark, 0.44);
+    }
+    &--brown {
+      background-color: transparentize($waterketen-xxdark, 0.44);
+    }
+    padding-top: rem(50);
+  }
+}

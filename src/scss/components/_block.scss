@@ -1,0 +1,42 @@
+
+.block {
+  @include transition(background-color color);
+  border-radius: rem(30);
+  padding: rem(20) rem(40);
+
+  h1,
+  h2 {
+    font-size: rem(26);
+    line-height: rem(32);
+  }
+}
+
+@each $color, $cluster in $cluster-mapping {
+  .cluster--#{$cluster} {
+    .block--medium {
+      @include bg($color, medium);
+    }
+
+    .block--dark {
+      @include bg($color, dark);
+    }
+
+    .block--xdark {
+      @include bg($color, xdark);
+    }
+
+    .block--xxdark {
+      @include bg($color, xxdark);
+    }
+  }
+}
+
+.block--type1 {
+  border-bottom-right-radius: 0;
+  border-top-left-radius: 0;
+}
+
+.block--type2 {
+  border-bottom-left-radius: 0;
+  border-top-right-radius: 0;
+}

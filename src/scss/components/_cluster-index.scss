@@ -1,0 +1,77 @@
+
+.ClusterIndex {
+  background-color: blue(xxlight);
+  color: blue(xxdark);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.ClusterIndex-header {
+  align-items: center;
+  display: flex;
+  height: rem(83);
+  justify-content: center;
+
+  @include media-breakpoint-up(l) {
+    height: rem(124);
+  }
+}
+
+.ClusterIndex-filter {
+  align-items: center;
+  background-color: blue(xdark);
+  color: white();
+  display: flex;
+  height: rem(80);
+  text-transform: uppercase;
+
+  ul {
+    display: flex;
+    list-style: none;
+    margin-left: rem(-16);
+    margin-right: rem(-16);
+  }
+
+  li {
+    margin-left: rem(16);
+    margin-right: rem(16);
+  }
+
+  input {
+    margin-right: rem(8);
+  }
+}
+
+.ClusterIndex-developments {
+  align-items: center;
+  background-color: blue(xlight);
+  display: flex;
+  height: rem(80);
+  justify-content: center;
+  text-transform: uppercase;
+
+  .button {
+    margin-left: rem(-24);
+  }
+}
+
+.ClusterIndex-results {
+  background-color: blue(xxlight);
+  padding: rem(24) 0;
+
+  h2 {
+    border-bottom: rem(1) solid blue(dark);
+    margin-bottom: rem(24);
+    padding-bottom: rem(16);
+  }
+}
+
+.ClusterIndex-grid {
+  // Address columns of any kind.
+  > * {
+    border-bottom: rem(1) solid blue(dark);
+    margin-bottom: rem(24);
+    padding-bottom: rem(24);
+  }
+}

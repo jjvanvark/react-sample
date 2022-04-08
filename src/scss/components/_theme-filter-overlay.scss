@@ -1,0 +1,58 @@
+.theme-filter-overlay {
+  position: absolute;
+  top: rem(80);
+  left: 0;
+  right: rem(16);
+  background-color: $waterkwantiteit-xxdark;
+  color: $white;
+  display: none;
+  padding: rem(24);
+  z-index: 5;
+  border-bottom-left-radius: rem(20);
+  flex-wrap: wrap;
+
+  &__column {
+    flex: 1 0 50%;
+    max-width: 50%;
+    margin-bottom: rem(16);
+  }
+
+  &__column-list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-right: rem(16);
+    & > li {
+      margin-left: 0;
+      margin-bottom: rem(8);
+    }
+  }
+
+  &--open {
+    display: flex;
+  }
+
+  &__backdrop {
+    display: none;
+    position: fixed;
+    background-color: transparent;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+  }
+
+  @include media-breakpoint-up(l) {
+    &__backdrop--open {
+      display: block;
+    }
+  }
+
+  @include media-breakpoint-up(xl) {
+    flex-wrap: nowrap;
+    &__column {
+      flex: 1 0 auto;
+      max-width: 33.33333333%;
+    }
+  }
+}

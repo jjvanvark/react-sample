@@ -1,0 +1,23 @@
+.disposition-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: rem(48);
+  margin-bottom: rem(40);
+  &__button {
+    color: blue(xxdark) !important;
+    background-color: transparent !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  &__label {
+    background-color: blue(xxdark);
+    color: $white;
+    font-weight: bold;
+    padding: rem(4) rem(8);
+    border-radius: rem(8);
+  }
+  @include media-breakpoint-up(l) {
+    margin-bottom: rem(80);
+  }
+}

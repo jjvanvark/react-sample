@@ -1,0 +1,38 @@
+# Based on https://github.com/alexkaratarakis/gitattributes/blob/master/Web.gitattributes
+
+# Source code
+*.css             text diff=css
+*.html            text diff=html
+*.scss            text diff=css
+
+# Documentation
+*.md              text diff=markdown
+
+# Templates
+*.twig            text
+
+# Configs
+.env              text
+.gitattributes    text
+package.json      text eol=lf
+package-lock.json text -diff
+
+# Graphics
+*.gif             binary
+*.ico             binary
+*.jpg             binary
+*.jpeg            binary
+*.png             binary
+
+# SVG treated as an asset (binary) by default.
+*.svg             text
+
+# Video
+*.mp4             binary
+
+# Fonts
+*.ttf             binary
+*.eot             binary
+*.otf             binary
+*.woff            binary
+*.woff2           binary

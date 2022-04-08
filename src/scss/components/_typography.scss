@@ -1,0 +1,32 @@
+
+h1,
+h2,
+h3 {
+  font-weight: 700;
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+.text-align-left {
+  text-align: left;
+}
+
+.text-align-right {
+  text-align: right;
+}
+
+@include media-breakpoint-up(l) {
+  .text-align-lg-center {
+    text-align: center;
+  }
+
+  .text-align-lg-left {
+    text-align: left;
+  }
+
+  .text-align-lg-right {
+    text-align: right;
+  }
+}

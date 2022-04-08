@@ -1,0 +1,361 @@
+.ClusterDetail {
+  background-color: blue(xxlight);
+  color: blue(xxdark);
+  min-height: 100vh;
+
+  &-back {
+    display: none;
+    align-items: center;
+    background-color: blue(xdark);
+    border-bottom-right-radius: rem(10);
+    height: rem(48);
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: rem(48);
+    z-index: 1;
+    @include media-breakpoint-up(l) {
+      display: inline-flex;
+    }
+  }
+
+  &-back-two {
+    display: flex;
+    align-items: center;
+    margin-bottom: rem(16);
+    text-transform: uppercase;
+    svg {
+      width: rem(6);
+      margin-right: rem(4);
+    }
+    @include media-breakpoint-up(l) {
+      display: none;
+    }
+  }
+
+  &-header {
+    align-items: center;
+    display: flex;
+    height: rem(83);
+    justify-content: center;
+
+    @include media-breakpoint-up(l) {
+      height: rem(124);
+    }
+  }
+
+  &-title {
+    margin-bottom: rem(16);
+    color: $white;
+    background-color: blue(xdark);
+
+    @include media-breakpoint-up(l) {
+      margin-bottom: rem(32);
+    }
+  }
+
+  &-intro {
+    margin-bottom: rem(32);
+    br {
+      display: none;
+    }
+
+    h2 {
+      font-size: rem(20);
+      line-height: rem(24);
+      margin-bottom: rem(8);
+
+      @include media-breakpoint-up(l) {
+        font-size: rem(26);
+        line-height: rem(32);
+      }
+    }
+  }
+
+  &-legal {
+    margin-bottom: rem(24);
+    background: blue(xxdark);
+    color: $white;
+  }
+
+  &-development {
+    margin-bottom: rem(24);
+    background-color: blue(dark);
+    color: $white;
+  }
+
+  &-objective {
+    margin-bottom: rem(24);
+    background-color: blue(xdark);
+    color: $white;
+  }
+
+  &-ambition {
+    margin-bottom: rem(24);
+    background-color: blue(dark);
+    color: $white;
+
+    @include media-breakpoint-up(l) {
+      margin-bottom: rem(-12);
+    }
+  }
+
+  &__image-one {
+    padding: 0px;
+    position: relative;
+    z-index: 1;
+    &-inner {
+      background: no-repeat center/cover;
+      position: absolute;
+      top: rem(34);
+      left: rem(12);
+      right: rem(12);
+      bottom: rem(16);
+    }
+    &-img {
+      width: 100%;
+      position: relative;
+    }
+  }
+
+  &-image {
+    @include box-shadow();
+    z-index: 1;
+    position: relative;
+    margin-bottom: rem(32);
+
+    img {
+      width: 100%;
+    }
+
+    &-2 {
+      display: none;
+      @include media-breakpoint-up(l) {
+        display: block;
+        padding-top: 150%;
+        margin-top: -100%;
+        z-index: 0;
+        &-inner {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          background: no-repeat center/cover;
+        }
+      }
+    }
+  }
+
+  &-more-inner {
+    background-color: blue(medium);
+    color: $white;
+  }
+
+  &-body {
+    padding-bottom: rem(40);
+  }
+
+  &-download-link {
+    color: $white;
+    text-decoration: underline;
+    text-transform: capitalize;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  &__video-button {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: transparent;
+    border: 0;
+    width: 100%;
+    cursor: pointer;
+  }
+
+  &__video-button-inner {
+    background-color: blue(dark);
+    padding: rem(15);
+    border-radius: 50%;
+    margin-top: rem(30);
+  }
+
+  &--purple {
+    background-color: purple(xxlight);
+    color: purple(xxdark);
+    .ClusterDetail {
+      &-back {
+        background-color: purple(xdark);
+      }
+      &-title {
+        background-color: purple(xdark);
+      }
+      &-legal {
+        background-color: purple(xxdark);
+      }
+      &-development {
+        background-color: purple(dark);
+      }
+      &-objective {
+        background-color: purple(xdark);
+      }
+      &-ambition {
+        background-color: purple(dark);
+      }
+      &-more-inner {
+        background-color: purple(medium);
+      }
+      &__video-button-inner {
+        background-color: purple(dark);
+      }
+    }
+  }
+
+  &--red {
+    background-color: red(xxlight);
+    color: red(xxdark);
+    .ClusterDetail {
+      &-back {
+        background-color: red(xdark);
+      }
+      &-title {
+        background-color: red(xdark);
+      }
+      &-legal {
+        background-color: red(xxdark);
+      }
+      &-development {
+        background-color: red(dark);
+      }
+      &-objective {
+        background-color: red(xdark);
+      }
+      &-ambition {
+        background-color: red(dark);
+      }
+      &-more-inner {
+        background-color: red(medium);
+      }
+      &__video-button-inner {
+        background-color: red(dark);
+      }
+    }
+  }
+
+  &--yellow {
+    background-color: yellow(xxlight);
+    color: yellow(xxdark);
+    .ClusterDetail {
+      &-back {
+        background-color: yellow(xdark);
+      }
+      &-title {
+        background-color: yellow(xdark);
+      }
+      &-legal {
+        background-color: yellow(xxdark);
+      }
+      &-development {
+        background-color: yellow(dark);
+      }
+      &-objective {
+        background-color: yellow(xdark);
+      }
+      &-ambition {
+        background-color: yellow(dark);
+      }
+      &-more-inner {
+        background-color: yellow(medium);
+      }
+      &__video-button-inner {
+        background-color: yellow(dark);
+      }
+    }
+  }
+
+  &--green {
+    background-color: green(xxlight);
+    color: green(xxdark);
+    .ClusterDetail {
+      &-back {
+        background-color: green(xdark);
+      }
+      &-title {
+        background-color: green(xdark);
+      }
+      &-legal {
+        background-color: green(xxdark);
+      }
+      &-development {
+        background-color: green(dark);
+      }
+      &-objective {
+        background-color: green(xdark);
+      }
+      &-ambition {
+        background-color: green(dark);
+      }
+      &-more-inner {
+        background-color: green(medium);
+      }
+      &__video-button-inner {
+        background-color: green(dark);
+      }
+    }
+  }
+
+  &--brown {
+    background-color: brown(xxlight);
+    color: brown(xxdark);
+    .ClusterDetail {
+      &-back {
+        background-color: brown(xdark);
+      }
+      &-title {
+        background-color: brown(xdark);
+      }
+      &-legal {
+        background-color: brown(xxdark);
+      }
+      &-development {
+        background-color: brown(dark);
+      }
+      &-objective {
+        background-color: brown(xdark);
+      }
+      &-ambition {
+        background-color: brown(dark);
+      }
+      &-more-inner {
+        background-color: brown(medium);
+      }
+      &__video-button-inner {
+        background-color: brown(dark);
+      }
+    }
+  }
+
+  @include media-breakpoint-up(l) {
+    &-body {
+      padding-bottom: rem(80);
+    }
+
+    &-objective {
+      margin-top: rem(-132);
+    }
+  }
+
+  @include media-breakpoint-up(xl) {
+    &-objective {
+      margin-top: rem(-152);
+    }
+  }
+}

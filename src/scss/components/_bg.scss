@@ -1,0 +1,49 @@
+
+@each $color, $cluster in $cluster-mapping {
+  .cluster--#{$cluster} {
+    %bg--medium {
+      @include bg($color, medium);
+    }
+
+    %bg--dark {
+      @include bg($color, dark);
+    }
+
+    %bg--xdark {
+      @include bg($color, xdark);
+    }
+
+    %bg--xxdark {
+      @include bg($color, xxdark);
+    }
+  }
+}
+
+@each $color, $cluster in $cluster-mapping {
+  .cluster--#{$cluster} {
+    %bg--medium--hover {
+      &:hover {
+        @include bg($color, medium);
+      }
+    }
+
+    %bg--dark--hover {
+      &:hover {
+        @include bg($color, dark);
+      }
+    }
+
+    %bg--xdark--hover {
+      &:hover {
+        @include bg($color, xdark);
+      }
+    }
+
+    %bg--xxdark--hover {
+      &:hover {
+        @include bg($color, xxdark);
+      }
+    }
+  }
+}
+

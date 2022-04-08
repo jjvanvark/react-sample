@@ -1,0 +1,160 @@
+$black: #000;
+$white: #fff;
+
+$organisatie-bestuur-dark: #f7a520;
+$organisatie-bestuur-light: #f4c464;
+$organisatie-bestuur-medium: #f7b71e;
+$organisatie-bestuur-xdark: #f79421;
+$organisatie-bestuur-xlight: #f4e9d4;
+$organisatie-bestuur-xxdark: #823b08;
+$organisatie-bestuur-xxlight: #fdfbf6;
+
+$organisatie-bestuur: (
+  dark: $organisatie-bestuur-dark,
+  light: $organisatie-bestuur-light,
+  medium: $organisatie-bestuur-medium,
+  xdark: $organisatie-bestuur-xdark,
+  xlight: $organisatie-bestuur-xlight,
+  xxdark: $organisatie-bestuur-xxdark,
+  xxlight: $organisatie-bestuur-xxlight,
+);
+
+$overkoepelend-dark: #685384;
+$overkoepelend-light: #9587b2;
+$overkoepelend-medium: #7d6b99;
+$overkoepelend-xdark: #4f3881;
+$overkoepelend-xlight: #b0aad4;
+$overkoepelend-xxdark: #422462;
+$overkoepelend-xxlight: #efeef6;
+
+$overkoepelend: (
+  dark: $overkoepelend-dark,
+  light: $overkoepelend-light,
+  medium: $overkoepelend-medium,
+  xdark: $overkoepelend-xdark,
+  xlight: $overkoepelend-xlight,
+  xxdark: $overkoepelend-xxdark,
+  xxlight: $overkoepelend-xxlight,
+);
+
+$waterketen-dark: #785332;
+$waterketen-light: #ba956e;
+$waterketen-medium: #a37a4e;
+$waterketen-xdark: #5d3a1f;
+$waterketen-xlight: #d7ba98;
+$waterketen-xxdark: #402313;
+$waterketen-xxlight: #f7f1ea;
+
+$waterketen: (
+  dark: $waterketen-dark,
+  light: $waterketen-light,
+  medium: $waterketen-medium,
+  xdark: $waterketen-xdark,
+  xlight: $waterketen-xlight,
+  xxdark: $waterketen-xxdark,
+  xxlight: $waterketen-xxlight,
+);
+
+$waterkwaliteit-dark: #008041;
+$waterkwaliteit-light: #23b573;
+$waterkwaliteit-medium: #1f9357;
+$waterkwaliteit-xdark: #00622d;
+$waterkwaliteit-xlight: #96d3c2;
+$waterkwaliteit-xxdark: #1c4233;
+$waterkwaliteit-xxlight: #eaf6f3;
+
+$waterkwaliteit: (
+  dark: $waterkwaliteit-dark,
+  light: $waterkwaliteit-light,
+  medium: $waterkwaliteit-medium,
+  xdark: $waterkwaliteit-xdark,
+  xlight: $waterkwaliteit-xlight,
+  xxdark: $waterkwaliteit-xxdark,
+  xxlight: $waterkwaliteit-xxlight,
+);
+
+$waterkwantiteit-dark: #4c91bf;
+$waterkwantiteit-light: #69c7ff;
+$waterkwantiteit-medium: #6eb4df;
+$waterkwantiteit-xdark: #286396;
+$waterkwantiteit-xlight: #d4effc;
+$waterkwantiteit-xxdark: #213165;
+$waterkwantiteit-xxlight: #e9f5ff;
+
+$waterkwantiteit: (
+  dark: $waterkwantiteit-dark,
+  light: $waterkwantiteit-light,
+  medium: $waterkwantiteit-medium,
+  xdark: $waterkwantiteit-xdark,
+  xlight: $waterkwantiteit-xlight,
+  xxdark: $waterkwantiteit-xxdark,
+  xxlight: $waterkwantiteit-xxlight,
+);
+
+$waterveiligheid-dark: #b1484f;
+$waterveiligheid-light: #bc747c;
+$waterveiligheid-medium: #a64f55;
+$waterveiligheid-xdark: #b72845;
+$waterveiligheid-xlight: #e7a8a2;
+$waterveiligheid-xxdark: #7b1129;
+$waterveiligheid-xxlight: #faeeec;
+
+$waterveiligheid: (
+  dark: $waterveiligheid-dark,
+  light: $waterveiligheid-light,
+  medium: $waterveiligheid-medium,
+  xdark: $waterveiligheid-xdark,
+  xlight: $waterveiligheid-xlight,
+  xxdark: $waterveiligheid-xxdark,
+  xxlight: $waterveiligheid-xxlight,
+);
+
+$color-mapping: (
+  blue: $waterkwantiteit,
+  purple: $overkoepelend,
+  red: $waterveiligheid,
+  yellow: $organisatie-bestuur,
+  green: $waterkwaliteit,
+  brown: $waterketen,
+);
+
+$cluster-mapping: (
+  blue: "waterkwantiteit",
+  purple: "overkoepelend",
+  red: "waterveiligheid",
+  yellow: "organisatie-bestuur",
+  green: "waterkwaliteit",
+  brown: "waterketen",
+);
+
+$button-background: $waterkwantiteit-xlight;
+$button-background-active: $waterkwantiteit-light;
+
+$box-shadow: 0 rem(10) rem(24) rgba(0, 0, 0, 0.16);
+
+$transition-duration: 0.25s;
+$transition-timing-function: linear;
+
+/* Overwrite Bootstrap stuff. */
+$grid-gutter-width: rem(32);
+
+$breakpoints: (
+  xs: 0,
+  s: 300px,
+  m: 600px,
+  l: 900px,
+  xl: 1200px,
+  xxl: 1500px,
+  3xl: 1800px,
+);
+
+/* deFlex stuff. */
+// The (maximum) container widths.
+$gutter: rem(32);
+$containers: (
+  m: 576px,
+  l: 864px,
+  xl: 1240px,
+);
+
+$enable-debug: false;

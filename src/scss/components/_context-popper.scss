@@ -1,0 +1,36 @@
+.context-popper {
+  span {
+    display: block;
+  }
+  &__button {
+    background: transparent;
+    font-weight: normal;
+    text-decoration: underline;
+    cursor: pointer;
+    color: inherit;
+    &:hover,
+    &:active {
+      color: inherit;
+    }
+  }
+  &__panel {
+    color: $black;
+    display: block;
+    background-color: $white;
+    border-radius: rem(8);
+    display: none;
+    padding: rem(16);
+    max-width: rem(240);
+    z-index: 1;
+    box-shadow: $box-shadow;
+    overflow: hidden;
+    &--visible {
+      display: block;
+    }
+  }
+  &__title {
+    display: block;
+    margin-bottom: rem(8);
+    font-weight: 700;
+  }
+}

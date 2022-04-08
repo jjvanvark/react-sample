@@ -1,0 +1,75 @@
+.Result {
+  background-color: blue(xxlight);
+  border-radius: rem(8);
+  color: blue(xxdark);
+  display: block;
+
+  &:hover {
+    background-color: blue(xdark);
+    color: white();
+  }
+
+  article {
+    display: flex;
+    height: 100%;
+  }
+
+  &--yellow {
+    &:hover {
+      background-color: yellow(xdark);
+    }
+  }
+  &--brown {
+    &:hover {
+      background-color: brown(xdark);
+    }
+  }
+  &--purple {
+    &:hover {
+      background-color: purple(xdark);
+    }
+  }
+  &--red {
+    &:hover {
+      background-color: red(xdark);
+    }
+  }
+  &--green {
+    &:hover {
+      background-color: green(xdark);
+    }
+  }
+}
+
+.Result-image {
+  border-radius: rem(8);
+  box-shadow: 0 rem(10) rem(24) rgba(0, 0, 0, 0.16);
+  flex-shrink: 0;
+  overflow: hidden;
+  width: 40%; // This number requires tweaking.
+  height: auto;
+  background: no-repeat center/cover;
+}
+
+.Result-title {
+  font-size: rem(20);
+  line-height: rem(24);
+}
+
+.Result-body {
+  padding: rem(12) rem(16);
+}
+
+.Result-cluster {
+  @include transition(background-color color);
+  color: blue(xdark);
+  margin-top: rem(12);
+
+  .Result:hover & {
+    color: white();
+  }
+
+  div {
+    text-transform: capitalize;
+  }
+}

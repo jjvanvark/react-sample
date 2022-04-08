@@ -1,0 +1,35 @@
+*,
+*::after,
+*::before {
+  border: 0;
+  border-radius: 0;
+  box-sizing: border-box;
+  font-size: 1em;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+html {
+  font: normal 100%/1.5 sans-serif, serif;
+  scroll-behavior: smooth;
+  font-family: "TheMixC5", sans-serif;
+}
+
+body,
+button {
+  font-family: "TheMixC5", sans-serif;
+}
+
+ul,
+ol {
+  margin-left: rem(16);
+}
+
+p + p {
+  margin-top: rem(24);
+}
+
+.uppercase {
+  text-transform: uppercase;
+}

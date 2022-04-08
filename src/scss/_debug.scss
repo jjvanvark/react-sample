@@ -1,0 +1,81 @@
+
+@if $enable-debug {
+  $grid-gutter-width: rem(32);
+  $debug-column-color: transparentize(red, .875);
+  $half-gutter: rem(24);
+  $grid-columns-mobile: 4;
+  $grid-columns-desktop: 12;
+
+  html {
+    /* &:hover {*/
+    &::after {
+      background-image: repeating-linear-gradient(to right,
+              transparent,
+              transparent $half-gutter,
+              $debug-column-color $half-gutter,
+              $debug-column-color calc((100% - #{$grid-columns-mobile * $grid-gutter-width}) / #{$grid-columns-mobile} + #{$half-gutter}),
+              transparent calc((100% - #{$grid-columns-mobile * $grid-gutter-width}) / #{$grid-columns-mobile} + #{$half-gutter}),
+              transparent calc((100% - #{$grid-columns-mobile * $grid-gutter-width}) / #{$grid-columns-mobile} + #{$grid-gutter-width}));
+      background-position: center;
+      background-repeat: no-repeat;
+      bottom: 0;
+      content: '';
+      display: block;
+      left: 0;
+      pointer-events: none;
+      position: fixed;
+      right: 0;
+      top: 0;
+      z-index: 99999;
+
+      @include media-breakpoint-up(l) {
+        $grid-gutter-width: rem(32);
+        $half-gutter: rem(16);
+        $container-max-width: rem(1240);
+        $grid-columns: 12;
+        $column-width: ($container-max-width - $grid-columns * $grid-gutter-width) / $grid-columns;
+
+        background-image: repeating-linear-gradient(to right,
+                transparent,
+                transparent $half-gutter,
+                $debug-column-color $half-gutter,
+                $debug-column-color $column-width + $half-gutter,
+                transparent $column-width + $half-gutter,
+                transparent $column-width + $grid-gutter-width);
+        background-size: $container-max-width 100%;
+      }
+    }
+
+    &::before {
+      bottom: 0;
+      color: transparentize(black, .75);
+      content: 'Debug';
+      display: block;
+      font-size: calc(6.25vh + 6.25vw + 10px);
+      font-weight: bold;
+      left: 0;
+      pointer-events: none;
+      position: fixed;
+      z-index: 100000;
+    }
+
+    %grid-row {
+      outline: dotted cyan rem(1px);
+    }
+
+    %grid-column {
+      outline: dotted red rem(1px);
+    }
+
+    .row {
+      @extend %grid-row;
+
+      > * {
+        @extend %grid-column;
+      }
+    }
+    /*  }*/
+  }
+
+}
+

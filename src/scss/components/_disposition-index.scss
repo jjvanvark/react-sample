@@ -1,0 +1,60 @@
+.DispositionIndex {
+  background-color: blue(xxlight);
+  color: blue(xxdark);
+  min-height: 100vh;
+}
+
+.DispositionIndex-header {
+  align-items: center;
+  background-color: blue(medium);
+  display: flex;
+  height: rem(123);
+}
+
+.DispositionIndex-areas {
+  align-items: center;
+  background-color: white();
+  display: flex;
+  height: rem(80);
+}
+
+.DispositionIndex-filter {
+  align-items: center;
+  display: flex;
+}
+
+.DispositionIndex__counter {
+  display: none;
+}
+
+.Disposition-search {
+  display: flex;
+  padding: rem(12) 0;
+  margin-bottom: rem(24);
+  border-bottom: rem(1) solid $waterkwantiteit-xdark;
+  align-items: center;
+  & > input {
+    flex: 2 1 100%;
+    font-weight: bold;
+    outline: none;
+    background-color: transparent;
+  }
+  & > svg {
+    flex: 1 1 rem(24);
+  }
+}
+
+@include media-breakpoint-up(l) {
+  .DispositionIndex__counter {
+    display: block;
+    padding: rem(32) rem(16) rem(24);
+  }
+
+  .Disposition-search {
+    border-bottom: 0;
+    margin-bottom: 0;
+    padding: rem(32) 0 rem(24);
+    display: block;
+    text-align: right;
+  }
+}

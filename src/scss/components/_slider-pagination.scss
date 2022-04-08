@@ -1,0 +1,89 @@
+.slider-pagination {
+  display: flex;
+  justify-content: space-between;
+  &__button {
+    background-color: transparent;
+    color: blue(xxdark);
+  }
+  &__dots {
+    padding: 0 rem(20);
+    border-radius: rem(12);
+    background-color: blue(medium);
+  }
+  &__dot-button {
+    margin: rem(16) rem(4);
+    width: rem(12);
+    height: rem(12);
+    background-color: $white;
+    border-radius: rem(6);
+    position: relative;
+    &--active {
+      background-color: blue(xxdark);
+    }
+  }
+  &--purple {
+    .slider-pagination {
+      &__button {
+        color: purple(xxdark);
+      }
+      &__dots {
+        background-color: purple(medium);
+      }
+      &__dot-button--active {
+        background-color: purple(xxdark);
+      }
+    }
+  }
+  &--red {
+    .slider-pagination {
+      &__button {
+        color: red(xxdark);
+      }
+      &__dots {
+        background-color: red(medium);
+      }
+      &__dot-button--active {
+        background-color: red(xxdark);
+      }
+    }
+  }
+  &--yellow {
+    .slider-pagination {
+      &__button {
+        color: yellow(xxdark);
+      }
+      &__dots {
+        background-color: yellow(medium);
+      }
+      &__dot-button--active {
+        background-color: yellow(xxdark);
+      }
+    }
+  }
+  &--green {
+    .slider-pagination {
+      &__button {
+        color: green(xxdark);
+      }
+      &__dots {
+        background-color: green(medium);
+      }
+      &__dot-button--active {
+        background-color: green(xxdark);
+      }
+    }
+  }
+  &--brown {
+    .slider-pagination {
+      &__button {
+        color: brown(xxdark);
+      }
+      &__dots {
+        background-color: brown(medium);
+      }
+      &__dot-button--active {
+        background-color: brown(xxdark);
+      }
+    }
+  }
+}
